@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #0b2545, #2162ac);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(85px, auto) repeat(5, 85px);
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.grid-container > button {
+    border: none;
+    background-color: #8DA9C4;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0B2545;
+}
+
+.grid-container > .output{
+    background-color: #EEF4ED;
+    /* quando o resultado aparecer será com as configurações daqui? mudei a color
+    para testar (também tirei o font-size)*/
+    color: #49e9a6;
+    
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 5px;
+}
+
+#span2{
+    grid-column: span 2;
+}
+
+.grid-container > .operator{
+    background: #0B2545;
+}
+
+.operator:hover{
+    background-color: #8DA9C4;
+}
+
+.output > .previous{
+    color: grey;
+    opacity: 45%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+}
+
+.output > .current{
+   color: #0B2545;
+   font-size: 2rem;
+   font-weight: 600;
+}
+
